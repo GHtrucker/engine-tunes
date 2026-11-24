@@ -6,11 +6,12 @@ Benchmark and tuning runs of local AI inference engines on my own hardware. Each
 
 | Folder | Test | Result |
 | --- | --- | --- |
-| [strata-titan-rtx](strata-titan-rtx/REPORT.md) | [Strata](https://github.com/Niko1221/Strata) 0.2.16 (engine 0.1.62), `STRATA_SM75_PERF=1` on one NVIDIA TITAN RTX, Windows 11, ready-made package, Q2_0 pack. Written for [Strata #2197](https://github.com/Niko1221/Strata/issues/2197). | Identical answers with the expert tier frozen (36/36); 17/30 identical in setup's config; decode +2 to +9 % |
+| [strata-titan-rtx](strata-titan-rtx/REPORT.md) | [Strata](https://github.com/Niko1221/Strata) 0.2.16 (engine 0.1.62), `STRATA_SM75_PERF=1` on one NVIDIA TITAN RTX, Windows 11, ready-made package, Q2_0 pack. Written for [Strata #2197](https://github.com/Niko1221/Strata/issues/2197). | Identical answers with the expert tier frozen (36/36); 17/30 identical in setup's config; decode +2 to +9 % || [strata-2x5060ti](strata-2x5060ti/REPORT.md) | [Strata](https://github.com/Niko1221/Strata) 0.2.20 (engine 0.1.65), standard benchmark on two NVIDIA RTX 5060 Ti 16 GB against one, Windows, ready-made package, Q2_0 pack, MTP drafter. | Two cards: prompt read about 2.1x, decode about 1.5x to 1.8x; six runs, each 21/21 requests and 12/12 sanity checks |
+
 
 Start with the folder's `REPORT.md`. It has the environment, the method, the tables, what was not run, and the limits.
 
-## Repeating the Strata run
+## Repeating the TITAN RTX run
 
 You need Strata installed and set up with a model, a Turing card (compute capability 7.5: RTX 20 series, TITAN RTX, Quadro RTX, T4), and `nvidia-smi` on the path. The script uses only Python's standard library and changes nothing in the Strata folder.
 
